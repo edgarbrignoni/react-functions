@@ -1,22 +1,40 @@
+
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/js/index.js'
+    './src/js/index.js',  
   ],
   output: {
-    filename: 'bundle.js',
+    filename: './public/bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: path.resolve(__dirname, '/public')
+    // publicPath: path.resolve(__dirname, './')
   },
   module: {
     rules: [
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
           use: ['babel-loader', 'eslint-loader']
+        },
+        { test: /\.md$/, use: [
+              {
+                  loader: "html-loader"
+              },
+              {
+                  loader: "markdown-loader",
+                  options: {
+                      /* your options here */
+                  }
+              }
+          ]
         },
         {
           test: /\.scss$/, use: [{
@@ -37,7 +55,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js', '.jsx'],
   },
   devtool: "source-map",
   devServer: {
@@ -49,12 +67,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      Popper: 'popper.js',
-      jQuery: 'jquery',
       // In case you imported plugins individually, you must also require them here:
       Util: "exports-loader?Util!bootstrap/js/dist/util",
-      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
+      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
     }),
     new HtmlWebpackPlugin({
         favicon: '4geeks.ico',

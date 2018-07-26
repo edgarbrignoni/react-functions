@@ -62,7 +62,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "29793e5a62a39669301f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b514fddec7936d16a43b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -752,7 +752,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/public";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -36621,57 +36621,184 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 
 __webpack_require__(/*! ../styles/index.scss */ "./src/styles/index.scss");
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //render your react application
 
 
 //include bootstrap npm library into the bundle
-_reactDom2.default.render(_react2.default.createElement('div', null, _react2.default.createElement(Navbar, null), _react2.default.createElement(PricingHeader, null), _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement('div', { className: 'card-deck mb-3 text-center' }, _react2.default.createElement(Card, {
-    title: 'Free',
-    price: '0',
-    users: 10,
-    storage: 2,
-    textButton: 'Sign up for free',
-    other: ["Email support", "Help center access"],
-    buttonStyle: '-outline'
-}), _react2.default.createElement(Card, {
-    title: 'Pro',
-    price: '15',
-    users: 20,
-    storage: 10,
-    textButton: 'Get started',
-    other: ["Priority email support", "Help center access"]
-}), _react2.default.createElement(Card, {
-    title: 'Enterprise',
-    price: '29',
-    users: 30,
-    storage: 15,
-    textButton: 'Contact Us',
-    other: ["Phone and email support", "Help center access"]
-}))), _react2.default.createElement(Footer, null)), document.querySelector('#app'));
+_reactDom2.default.render(_react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(Navbar, null),
+    _react2.default.createElement(PricingHeader, null),
+    _react2.default.createElement(
+        'div',
+        { className: 'container' },
+        _react2.default.createElement(
+            'div',
+            { className: 'card-deck mb-3 text-center' },
+            _react2.default.createElement(Card, {
+                title: 'Free',
+                price: '0',
+                users: 10,
+                storage: 2,
+                textButton: 'Sign up for free',
+                other: ["Email support", "Help center access"],
+                buttonStyle: '-outline'
+            }),
+            _react2.default.createElement(Card, {
+                title: 'Pro',
+                price: '15',
+                users: 20,
+                storage: 10,
+                textButton: 'Get started',
+                other: ["Priority email support", "Help center access"]
+            }),
+            _react2.default.createElement(Card, {
+                title: 'Enterprise',
+                price: '29',
+                users: 30,
+                storage: 15,
+                textButton: 'Contact Us',
+                other: ["Phone and email support", "Help center access"]
+            })
+        )
+    ),
+    _react2.default.createElement(Footer, null)
+), document.querySelector('#app'));
 
 //include your index.scss file into the bundle
 //import react into the bundle
 
 
 function Navbar(props) {
-    return _react2.default.createElement('div', { className: 'd-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow' }, _react2.default.createElement('h5', { className: 'my-0 mr-md-auto font-weight-normal' }, 'Company name'), _react2.default.createElement('nav', { className: 'my-2 my-md-0 mr-md-3' }, _react2.default.createElement('a', { className: 'p-2 text-dark', href: '#' }, 'Features'), _react2.default.createElement('a', { className: 'p-2 text-dark', href: '#' }, 'Enterprise'), _react2.default.createElement('a', { className: 'p-2 text-dark', href: '#' }, 'Support'), _react2.default.createElement('a', { className: 'p-2 text-dark', href: '#' }, 'Pricing')), _react2.default.createElement('a', { className: 'btn btn-outline-primary', href: '#' }, 'Sign up'));
+    return _react2.default.createElement(
+        'div',
+        { className: 'd-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow' },
+        _react2.default.createElement(
+            'h5',
+            { className: 'my-0 mr-md-auto font-weight-normal' },
+            'Company name'
+        ),
+        _react2.default.createElement(
+            'nav',
+            { className: 'my-2 my-md-0 mr-md-3' },
+            _react2.default.createElement(
+                'a',
+                { className: 'p-2 text-dark', href: '#' },
+                'Features'
+            ),
+            _react2.default.createElement(
+                'a',
+                { className: 'p-2 text-dark', href: '#' },
+                'Enterprise'
+            ),
+            _react2.default.createElement(
+                'a',
+                { className: 'p-2 text-dark', href: '#' },
+                'Support'
+            ),
+            _react2.default.createElement(
+                'a',
+                { className: 'p-2 text-dark', href: '#' },
+                'Pricing'
+            )
+        ),
+        _react2.default.createElement(
+            'a',
+            { className: 'btn btn-outline-primary', href: '#' },
+            'Sign up'
+        )
+    );
 }
 
 function PricingHeader() {
-    return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'pricing-header jumbotron jumbotron-fluid bg-white mx-auto pb-1' }, _react2.default.createElement('div', { className: 'container text-center' }, _react2.default.createElement('h1', { className: 'display-4' }, 'Pricing'), _react2.default.createElement('p', { className: 'lead' }, 'Quickly build an effective pricing table for your potential customers with this Bootstrap example. It\'s built with default Bootstrap components and utilities with little customization.'))));
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'div',
+            { className: 'pricing-header jumbotron jumbotron-fluid bg-white mx-auto pb-1' },
+            _react2.default.createElement(
+                'div',
+                { className: 'container text-center' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'display-4' },
+                    'Pricing'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'lead' },
+                    'Quickly build an effective pricing table for your potential customers with this Bootstrap example. It\'s built with default Bootstrap components and utilities with little customization.'
+                )
+            )
+        )
+    );
 }
 
 function Card(props) {
     var others = [];
     props.other.forEach(function (element, index) {
-        others.push(_react2.default.createElement('li', { key: index }, element));
+        others.push(_react2.default.createElement(
+            'li',
+            { key: index },
+            element
+        ));
     });
 
-    return _react2.default.createElement('div', { className: 'card mb-4 box-shadow' }, _react2.default.createElement('div', { className: 'card-header' }, _react2.default.createElement('h4', { className: 'my-0 font-weight-normal' }, props.title)), _react2.default.createElement('div', { className: 'card-body' }, _react2.default.createElement('h1', { className: 'card-title pricing-card-title' }, '$', props.price, ' ', _react2.default.createElement('small', { className: 'text-muted' }, '/ mo')), _react2.default.createElement('ul', { className: 'list-unstyled mt-3 mb-4' }, _react2.default.createElement('li', null, props.users, ' users included'), _react2.default.createElement('li', null, props.storage, ' GB of storage'), others), _react2.default.createElement('button', { type: 'button', className: "btn btn-lg btn-block btn" + (props.buttonStyle || "") + "-primary" }, props.textButton)));
+    return _react2.default.createElement(
+        'div',
+        { className: 'card mb-4 box-shadow' },
+        _react2.default.createElement(
+            'div',
+            { className: 'card-header' },
+            _react2.default.createElement(
+                'h4',
+                { className: 'my-0 font-weight-normal' },
+                props.title
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'card-body' },
+            _react2.default.createElement(
+                'h1',
+                { className: 'card-title pricing-card-title' },
+                '$',
+                props.price,
+                ' ',
+                _react2.default.createElement(
+                    'small',
+                    { className: 'text-muted' },
+                    '/ mo'
+                )
+            ),
+            _react2.default.createElement(
+                'ul',
+                { className: 'list-unstyled mt-3 mb-4' },
+                _react2.default.createElement(
+                    'li',
+                    null,
+                    props.users,
+                    ' users included'
+                ),
+                _react2.default.createElement(
+                    'li',
+                    null,
+                    props.storage,
+                    ' GB of storage'
+                ),
+                others
+            ),
+            _react2.default.createElement(
+                'button',
+                { type: 'button', className: "btn btn-lg btn-block btn" + (props.buttonStyle || "") + "-primary" },
+                props.textButton
+            )
+        )
+    );
 }
 
 Card.propTypes = {
@@ -36685,7 +36812,189 @@ Card.propTypes = {
 };
 
 function Footer(props) {
-    return _react2.default.createElement('footer', { className: 'pt-4 my-md-5 pt-md-5 border-top mx-auto' }, _react2.default.createElement('div', { className: 'row' }, _react2.default.createElement('div', { className: 'col-12 col-md' }, _react2.default.createElement('img', { className: 'mb-2', src: 'https://getbootstrap.com/assets/brand/bootstrap-solid.svg', alt: '', width: '24', height: '24' }), _react2.default.createElement('small', { className: 'd-block mb-3 text-muted' }, '\xA9 2017-2018')), _react2.default.createElement('div', { className: 'col-6 col-md' }, _react2.default.createElement('h5', null, 'Features'), _react2.default.createElement('ul', { className: 'list-unstyled text-small' }, _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Cool stuff')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Random feature')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Team feature')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Stuff for developers')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Another one')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Last time')))), _react2.default.createElement('div', { className: 'col-6 col-md' }, _react2.default.createElement('h5', null, 'Resources'), _react2.default.createElement('ul', { className: 'list-unstyled text-small' }, _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Resource')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Resource name')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Another resource')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Final resource')))), _react2.default.createElement('div', { className: 'col-6 col-md' }, _react2.default.createElement('h5', null, 'About'), _react2.default.createElement('ul', { className: 'list-unstyled text-small' }, _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Team')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Locations')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Privacy')), _react2.default.createElement('li', null, _react2.default.createElement('a', { className: 'text-muted', href: '#' }, 'Terms'))))));
+    return _react2.default.createElement(
+        'footer',
+        { className: 'pt-4 my-md-5 pt-md-5 border-top mx-auto' },
+        _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+                'div',
+                { className: 'col-12 col-md' },
+                _react2.default.createElement('img', { className: 'mb-2', src: 'https://getbootstrap.com/assets/brand/bootstrap-solid.svg', alt: '', width: '24', height: '24' }),
+                _react2.default.createElement(
+                    'small',
+                    { className: 'd-block mb-3 text-muted' },
+                    '\xA9 2017-2018'
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'col-6 col-md' },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Features'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'list-unstyled text-small' },
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Cool stuff'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Random feature'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Team feature'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Stuff for developers'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Another one'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Last time'
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'col-6 col-md' },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Resources'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'list-unstyled text-small' },
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Resource'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Resource name'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Another resource'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Final resource'
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'col-6 col-md' },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'About'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'list-unstyled text-small' },
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Team'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Locations'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Privacy'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'text-muted', href: '#' },
+                            'Terms'
+                        )
+                    )
+                )
+            )
+        )
+    );
 }
 
 /***/ }),
