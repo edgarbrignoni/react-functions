@@ -10,47 +10,47 @@ import 'bootstrap';
 import '../styles/index.scss';
 
 //render your react application
-    ReactDOM.render(
-        <div>
-            <Navbar />
-            <PricingHeader />
-            <div className="container">
-                <div className="card-deck mb-3 text-center">
-                    {/* The Cards */}
-                    <Card
-                       title="Free"
-                       price="0"
-                       users={10}
-                       storage={2}
-                       textButton="Sign up for free"
-                       other={["Email support","Help center access"]}
-                       buttonStyle="-outline"
-                   />
-                    <Card
-                       title="Pro" 
-                       price="15"
-                       users={20}
-                       storage={10}
-                       textButton="Get started"
-                       other={["Priority email support","Help center access"]}
-                   />
-                    <Card
-                       title="Enterprise"
-                       price="29"
-                       users={30}
-                       storage={15}
-                       textButton="Contact Us"
-                       other={["Phone and email support","Help center access"]}
-                   />
-                </div>
+ReactDOM.render(
+    <div>
+        <Navbar />
+        <PricingHeader />
+        <div className="container">
+            <div className="card-deck mb-3 text-center">
+                {/* The Cards */}
+                <Card
+                   title="Free"
+                   price="0"
+                   users={10}
+                   storage={2}
+                   textButton="Sign up for free"
+                   other={["Email support","Help center access"]}
+                   buttonStyle="-outline"
+               />
+                <Card
+                   title="Pro" 
+                   price="15"
+                   users={20}
+                   storage={10}
+                   textButton="Get started"
+                   other={["Priority email support","Help center access"]}
+               />
+                <Card
+                   title="Enterprise"
+                   price="29"
+                   users={30}
+                   storage={15}
+                   textButton="Contact Us"
+                   other={["Phone and email support","Help center access"]}
+               />
             </div>
-            <Footer />
         </div>
-        ,
-        document.querySelector('#app')
-    );
+        <Footer />
+    </div>
+    ,
+    document.querySelector('#app')
+);
     
-function Navbar(props){
+function Navbar(){
     return (<div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 className="my-0 mr-md-auto font-weight-normal">Company name</h5>
         <nav className="my-2 my-md-0 mr-md-3">
@@ -108,7 +108,7 @@ Card.propTypes = {
 };
 
 
-function Footer(props){
+function Footer(){
     return (<footer className="pt-4 my-md-5 pt-md-5 border-top mx-auto">
         <div className="row">
             <div className="col-12 col-md">
